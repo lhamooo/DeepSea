@@ -24,9 +24,9 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: a1d9acd3c0a5d4c06abfaae8a63f7711, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_ValidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -78,7 +78,7 @@ Material:
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
-    - _fresnelPower: 3
+    - _fresnelPower: 1.96
     m_Colors:
     - _fresnelColor: {r: 2.7849054, g: 0.96226406, b: 4, a: 1}
     - _scalingTilling: {r: 1, g: 32, b: 0, a: 0}
