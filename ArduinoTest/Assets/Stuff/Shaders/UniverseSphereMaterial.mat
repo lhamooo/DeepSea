@@ -51,8 +51,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelPower: 6
-    - _NoiseScale: 150
+    - _FresnelPower: 15.5
+    - _NoiseScale: 600
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ScrollSpeed: 0.003
