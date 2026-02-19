@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6976942922195624556
+--- !u!114 &-3086952237504399189
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,34 +20,23 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_hologram
-  m_Shader: {fileID: -6465566751694194690, guid: a1d9acd3c0a5d4c06abfaae8a63f7711, type: 3}
+  m_Name: neonGlowyMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: 8c66d3126cdec4564b189931f0260b6c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _SURFACE_TYPE_TRANSPARENT
+  m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Transparent
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
-  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _flickerTexture:
-        m_Texture: {fileID: 2800000, guid: 0057975a5f78d4ef58364457c3298a05, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _scanLinesTexture:
-        m_Texture: {fileID: 2800000, guid: 0811718fc41fe4b3fb175c9cc83b60e3, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -62,26 +51,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 0
-    - _AlphaToMask: 0
-    - _Blend: 0
-    - _CastShadows: 1
-    - _Cull: 2
-    - _DstBlend: 10
-    - _DstBlendAlpha: 10
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _SrcBlend: 5
-    - _SrcBlendAlpha: 1
-    - _Surface: 1
-    - _VertexOffset: 0.05
-    - _ZTest: 4
-    - _ZWrite: 0
-    - _ZWriteControl: 0
-    - _fresnelPower: 3
+    - _glowStrength: 1
+    - _pulseSpeed: 1
     m_Colors:
-    - _fresnelColor: {r: 2.7849054, g: 0.96226406, b: 4, a: 1}
-    - _scalingTilling: {r: 1, g: 32, b: 0, a: 0}
-    - _scanLineSpeed: {r: 0, g: 1, b: 0, a: 0}
+    - _emissionColor: {r: 1, g: 0.5428023, b: 0, a: 1}
+    - _neonColor: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
