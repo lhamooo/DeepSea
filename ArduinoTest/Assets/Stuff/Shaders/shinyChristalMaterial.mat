@@ -40,8 +40,10 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _bottomLine: 0.35
     - _metallic: 0
     - _smoothness: 0
+    - _topLine: 0.65
     m_Colors:
     - _baseColor: {r: 1, g: 1, b: 1, a: 1}
     - _bottomColor: {r: 1, g: 1, b: 1, a: 1}
