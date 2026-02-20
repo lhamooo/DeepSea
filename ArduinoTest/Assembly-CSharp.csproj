@@ -51,6 +51,7 @@
     <Compile Include="Assets\Scripts\Swarm\Boid.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\ArduinoConnector.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\FishMovement.cs" />
     <Compile Include="Assets\Scripts\WhaleBehaviour.cs" />

@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class JellyMovement : MonoBehaviour
 {
-    private int count;
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float animLength = 4f;
+    [SerializeField] private float maxDistanceFromZero = 10;
+    private float timer = 0;
+    private int count = 1;
     private Rigidbody rb;
 
     void Start()
@@ -13,11 +17,18 @@ public class JellyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (count > 1000)
+        if (timer >= animLength)
         {
-            rb.AddForce(0, 0.2f, 0);
-            count = 0;
+            timer = 0;
+            rb.AddRelativeForce(0, moveSpeed, 0, ForceMode.Impulse);
+            rb.AddTorque(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
         }
-        count++;
+        rb.linearDamping = timer;
+        timer += Time.deltaTime;
+
+        if (Vector3.Distance(transform.position, Vector3.zero) > maxDistanceFromZero)
+        {
+            transform.position *= -0.9f;
+        }
     }
 }

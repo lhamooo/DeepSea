@@ -102,6 +102,57 @@ MonoBehaviour:
     m_DampPosition: 0.5
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!1 &617498912342449734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845890344739377136}
+  - component: {fileID: 7770802336530326047}
+  m_Layer: 0
+  m_Name: TailUpperRightFinDamping_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &845890344739377136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617498912342449734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2380302510616615387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7770802336530326047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617498912342449734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b37cffab30b939469bac076fdd82c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.DampedTransform
+  m_Weight: 1
+  m_Data:
+    m_ConstrainedObject: {fileID: 4063353260826072143}
+    m_Source: {fileID: 3304393833628595448}
+    m_DampPosition: 0.5
+    m_DampRotation: 0.5
+    m_MaintainAim: 1
 --- !u!1 &1344312394997900495
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +459,108 @@ MonoBehaviour:
     m_DampPosition: 0.5
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!1 &6544595296308061722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1970821766570373146}
+  - component: {fileID: 3606347898360885411}
+  m_Layer: 0
+  m_Name: TailUpperRightFinDamping_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1970821766570373146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6544595296308061722}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2380302510616615387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3606347898360885411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6544595296308061722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b37cffab30b939469bac076fdd82c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.DampedTransform
+  m_Weight: 1
+  m_Data:
+    m_ConstrainedObject: {fileID: 3562794953275345086}
+    m_Source: {fileID: 4063353260826072143}
+    m_DampPosition: 0.5
+    m_DampRotation: 0.5
+    m_MaintainAim: 1
+--- !u!1 &6583293453160548009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3353485255557697183}
+  - component: {fileID: 3932022447921032864}
+  m_Layer: 0
+  m_Name: TailUpperLeftFinDamping_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3353485255557697183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583293453160548009}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2380302510616615387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3932022447921032864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583293453160548009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b37cffab30b939469bac076fdd82c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.DampedTransform
+  m_Weight: 1
+  m_Data:
+    m_ConstrainedObject: {fileID: 9155930613142030561}
+    m_Source: {fileID: 4223156991191950691}
+    m_DampPosition: 0.5
+    m_DampRotation: 0.5
+    m_MaintainAim: 1
 --- !u!1 &7017372952563842504
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +807,10 @@ Transform:
   - {fileID: 3081658871527855075}
   - {fileID: 1915531344453434311}
   - {fileID: 3798967584849370329}
+  - {fileID: 1343165174135814407}
+  - {fileID: 3353485255557697183}
+  - {fileID: 845890344739377136}
+  - {fileID: 1970821766570373146}
   m_Father: {fileID: 6139016900905297428}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1727008648720302584
@@ -670,6 +827,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.Rig
   m_Weight: 1
   m_Effectors: []
+--- !u!1 &9032969634175708180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1343165174135814407}
+  - component: {fileID: 2774477262529903318}
+  m_Layer: 0
+  m_Name: TailUpperLeftFinDamping_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1343165174135814407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032969634175708180}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2380302510616615387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2774477262529903318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9032969634175708180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b37cffab30b939469bac076fdd82c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.DampedTransform
+  m_Weight: 1
+  m_Data:
+    m_ConstrainedObject: {fileID: 4223156991191950691}
+    m_Source: {fileID: 1262541108951488523}
+    m_DampPosition: 0.5
+    m_DampRotation: 0.5
+    m_MaintainAim: 1
 --- !u!1001 &5960674794673865215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -680,11 +888,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.11044559
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.03916967
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -722,6 +930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JellyBob_Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 1823817582581819116, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a895ad278c76a44eb9e4e41627fc5329, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -735,6 +947,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 984702830644359381}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4563705858598337051}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4284565507690954361}
   m_SourcePrefab: {fileID: 100100000, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
 --- !u!4 &207071693809986199 stripped
 Transform:
@@ -754,6 +972,11 @@ Transform:
 --- !u!4 &599910440159288486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2671798442613334695, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+  m_PrefabInstance: {fileID: 5960674794673865215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1262541108951488523 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4845275434214529524, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
   m_PrefabInstance: {fileID: 5960674794673865215}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1392508120367385513 stripped
@@ -779,6 +1002,26 @@ Transform:
 --- !u!4 &3111700125369825186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -462066591851481507, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+  m_PrefabInstance: {fileID: 5960674794673865215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3304393833628595448 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9179183257865254151, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+  m_PrefabInstance: {fileID: 5960674794673865215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3562794953275345086 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2033088228560402111, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+  m_PrefabInstance: {fileID: 5960674794673865215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4063353260826072143 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1523487271098018384, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+  m_PrefabInstance: {fileID: 5960674794673865215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4223156991191950691 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1719468177246837604, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
   m_PrefabInstance: {fileID: 5960674794673865215}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6112821976360225871 stripped
@@ -844,8 +1087,55 @@ MonoBehaviour:
   - m_Rig: {fileID: 1727008648720302584}
     m_Active: 1
   m_Effectors: []
+--- !u!54 &4563705858598337051
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6807749341066050734}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4284565507690954361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6807749341066050734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1505917ee6ddeac4391d814449f77ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JellyMovement
+  moveSpeed: 0.5
+  animLength: 2
+  maxDistanceFromZero: 10
 --- !u!4 &6841562318083667719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 885677004655572728, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+  m_PrefabInstance: {fileID: 5960674794673865215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9155930613142030561 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5933223932300785378, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
   m_PrefabInstance: {fileID: 5960674794673865215}
   m_PrefabAsset: {fileID: 0}
