@@ -132,12 +132,12 @@ Material:
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
-    - _boarderPower: 3.5
+    - _boarderPower: 0.1
     - _boarderSize: 3
-    - _distortionSpeed: 0.1
+    - _distortionSpeed: 0.01
     - _noiceScale: -0.005
-    - _scrollinspeed: 0.48
-    - _surfaceMovementSpeed: 0.01
+    - _scrollinspeed: 0.08
+    - _surfaceMovementSpeed: 0.001
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

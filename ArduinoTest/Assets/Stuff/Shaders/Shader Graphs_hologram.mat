@@ -74,11 +74,11 @@ Material:
     - _SrcBlend: 5
     - _SrcBlendAlpha: 1
     - _Surface: 1
-    - _VertexOffset: 0.05
+    - _VertexOffset: 0.005
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
-    - _fresnelPower: 1.96
+    - _fresnelPower: 3
     m_Colors:
     - _fresnelColor: {r: 2.7849054, g: 0.96226406, b: 4, a: 1}
     - _scalingTilling: {r: 1, g: 32, b: 0, a: 0}
