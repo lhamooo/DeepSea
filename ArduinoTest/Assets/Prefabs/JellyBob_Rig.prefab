@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JellyMovement
   moveSpeed: 0.5
   animLength: 2
-  maxDistanceFromZero: 10
+  maxDistanceFromZero: 15
 --- !u!4 &6841562318083667719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 885677004655572728, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}

@@ -903,7 +903,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishMovement
   moveSpeed: 1
-  movementArea: {x: 10, y: 10, z: 10}
+  movementArea: {x: 15, y: 15, z: 15}
+  currentTarget: {x: 0, y: 0, z: 0}
 --- !u!4 &7692707129179769095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1130529374821477648, guid: 73aefb2955be97b48af65be7f2d38605, type: 3}

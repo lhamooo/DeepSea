@@ -4,7 +4,6 @@ public class FishMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 0;
     [SerializeField] private Vector3 movementArea = new Vector3(10, 10, 10);
-
     [SerializeField] private Vector3 currentTarget;
     private bool hasTarget = false;
 
