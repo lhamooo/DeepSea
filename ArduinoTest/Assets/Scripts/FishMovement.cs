@@ -11,7 +11,7 @@ public class FishMovement : MonoBehaviour
     [SerializeField] private bool canHunt = false;
     [SerializeField] private float huntSpeed = 2f;
     [SerializeField] private float huntingTurnSpeedModifier = 2f;
-    [SerializeField] private GameObject huntingTarget;
+    [SerializeField] private GameObject prey;
     private bool isHunting = false;
     private bool hasTarget = false;
     private float currentMoveSpeed;
@@ -39,7 +39,7 @@ public class FishMovement : MonoBehaviour
         LookAtTarget();
         transform.position += transform.forward * currentMoveSpeed * Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, currentTarget) < 0.1f && !isHunting)
+        if (Vector3.Distance(transform.position, currentTarget) < 0.2f && !isHunting)
         {
             hasTarget = false;
         }
@@ -62,17 +62,17 @@ public class FishMovement : MonoBehaviour
 
     private void HuntingBehaviour()
     {
-        if (huntingTarget == null)
+        if (prey == null)
         {
-            huntingTarget = FindClosestBoid();
+            prey = FindClosestBoid();
             hasTarget = true;
         }
         else
         {
-            currentTarget = huntingTarget.transform.position;
+            currentTarget = prey.transform.position;
             if (Vector3.Distance(transform.position, currentTarget) > 10f)
             {
-                huntingTarget = FindClosestBoid();
+                prey = FindClosestBoid();
             }
         }
     }
@@ -98,16 +98,17 @@ public class FishMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("InteractionZone"))
+        if (other.gameObject.CompareTag("InteractionZone") && canHunt)
         {
             isHunting = true;
             currentMoveSpeed = huntSpeed;
             currentTurnSpeedModifier = huntingTurnSpeedModifier;
         }
-        else if (isHunting && other.gameObject == huntingTarget)
+        else if (isHunting && other.gameObject == prey)
         {
-            Destroy(other);
-            huntingTarget = null;
+            Debug.Log("Prey reached");
+            Destroy(other.gameObject);
+            prey = null;
             isHunting = false;
             hasTarget = false;
             currentMoveSpeed = moveSpeed;

@@ -27,6 +27,17 @@ public class SwarmManager : MonoBehaviour
 
     void Update()
     {
+        for (int i = 0; i < swarmSize; i++)
+        {
+            if (boids[i] == null)
+            {
+                Vector3 randomPosition = Random.insideUnitSphere * 10;
+                GameObject boid = Instantiate(boidPrefab, randomPosition, Quaternion.identity);
+                boids[i] = boid.GetComponent<Boid>();
+                boids[i].velocity = Random.insideUnitSphere.normalized * boids[i].maxSpeed;
+            }
+        }
+
         foreach (Boid boid in boids)
         {
             Boid[] neighbors = FindNeighbors(boid, 5f);

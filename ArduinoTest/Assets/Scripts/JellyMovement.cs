@@ -14,7 +14,6 @@ public class JellyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timer >= animLength)

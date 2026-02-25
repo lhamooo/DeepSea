@@ -73,4 +73,17 @@ public class Boid : MonoBehaviour
 
         return Vector3.zero;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("InteractionZone"))
+        {
+            velocity *= Random.Range(-0.3f, 0.3f);
+        }
+    }
+
+    void OnDestroy()
+    {
+        Debug.Log("I'm dead!");
+    }
 }
