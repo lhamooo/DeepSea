@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\JellyMovement.cs" />
     <Compile Include="Assets\meshHeightCalculator.cs" />
     <Compile Include="Assets\Scripts\Swarm\SwarmManager.cs" />
+    <Compile Include="Assets\Scripts\InteractionRadius.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
