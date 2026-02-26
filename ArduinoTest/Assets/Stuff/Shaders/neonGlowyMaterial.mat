@@ -53,7 +53,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _glowStrength: 100
+    - _glowStrength: 95.72
     - _pulseSpeed: 1
     m_Colors:
     - _emissionColor: {r: 0, g: 0.7670984, b: 1, a: 1}

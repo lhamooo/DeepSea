@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FillEmission
-  m_Shader: {fileID: -6465566751694194690, guid: 8fb148ee987d74079b1c757965dc1637, type: 3}
+  m_Name: ripples
+  m_Shader: {fileID: -6465566751694194690, guid: aca3272703061484fb52902df1d59a73, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,8 +24,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _EmissionTexture:
-        m_Texture: {fileID: 2800000, guid: 9936ff621a1f84a76851e4ef91ec55d6, type: 3}
+    - _MainTexture:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -42,16 +42,20 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fill: 1
-    - _ObjectHeight: 1
-    - _OffsetPoint: -0.4
+    - _Amplitude: 0.1
+    - _EdgeBlend: 0.5
+    - _EffectRadius: 1
+    - _Frequency: 0
+    - _GradientEdge: 0
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RippleDensity: 1
     m_Colors:
-    - _EmissionColor: {r: 1, g: 0, b: 0.64280605, a: 0}
+    - _GradientColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RippleOrigin: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &4142404428968282530
+--- !u!114 &6565238977463762457
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
