@@ -92,7 +92,6 @@ public class FishMovement : MonoBehaviour
                 closestBoid = boid;
             }
         }
-
         return closestBoid;
     }
 

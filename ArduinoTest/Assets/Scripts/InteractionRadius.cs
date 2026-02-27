@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class InteractionRadius : MonoBehaviour
 {
+    [SerializeField] private SwarmManager[] swarmManagers;
+    [SerializeField] private float swarmActivationTime;
     private float expansionStrength;
     private bool isExpanding = false;
     private int timer;
@@ -15,6 +17,14 @@ public class InteractionRadius : MonoBehaviour
         }
         else if (isExpanding)
         {
+            if (timer == 0)
+            {
+                foreach (var swarmManager in swarmManagers)
+                {
+                    swarmManager.ActivateSwarm(swarmActivationTime);
+                }
+            }
+
             if (timer < expansionStrength)
             {
                 timer++;
