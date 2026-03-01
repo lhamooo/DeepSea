@@ -8,11 +8,19 @@ public class InteractionRadius : MonoBehaviour
     private float expansionStrength;
     private bool isExpanding = false;
     private int timer;
+    private SphereCollider sphereCollider;
+    void Start()
+    {
+        sphereCollider = GetComponent<SphereCollider>();
+        sphereCollider.enabled = false;
+    }
+
     void Update()
     {
         if (Keyboard.current.spaceKey.isPressed && timer == 0)
         {
             isExpanding = true;
+            sphereCollider.enabled = true;
             expansionStrength++;
         }
         else if (isExpanding)
@@ -38,6 +46,7 @@ public class InteractionRadius : MonoBehaviour
                 expansionStrength = 0;
                 transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 isExpanding = false;
+                sphereCollider.enabled = false;
             }
 
         }
