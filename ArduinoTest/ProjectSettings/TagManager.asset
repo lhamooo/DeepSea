@@ -8,6 +8,7 @@ TagManager:
   - Jelly
   - Worm
   - Boid
+  - Behaviour
   layers:
   - Default
   - TransparentFX

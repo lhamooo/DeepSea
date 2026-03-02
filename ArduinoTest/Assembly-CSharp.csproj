@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\FishMovement.cs" />
     <Compile Include="Assets\Scripts\WhaleBehaviour.cs" />
     <Compile Include="Assets\Scripts\JellyMovement.cs" />
+    <Compile Include="Assets\Scripts\BehaviourTrigger.cs" />
     <Compile Include="Assets\meshHeightCalculator.cs" />
     <Compile Include="Assets\Scripts\Swarm\SwarmManager.cs" />
     <Compile Include="Assets\Scripts\InteractionRadius.cs" />

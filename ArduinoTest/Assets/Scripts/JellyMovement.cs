@@ -11,11 +11,14 @@ public class JellyMovement : MonoBehaviour
     private float torque;
     private float timer = 0;
     private Rigidbody rb;
+    private BehaviourTrigger behaviourTrigger;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         torque = idleTorqueStrength;
+        behaviourTrigger = GetComponent<BehaviourTrigger>();
+        behaviourTrigger.OnBehaviourTriggered += TriggerBehaviour;
     }
 
     void Update()
@@ -35,18 +38,32 @@ public class JellyMovement : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    private void TriggerBehaviour(int strength)
     {
-        if (other.gameObject.CompareTag("InteractionZone"))
+        float strengthModifier = 1f;
+        float behaviourDuration = 5f;
+        switch (strength)
         {
-            StartCoroutine(RechargeActivation());
+            case 0:
+                strengthModifier = 0.8f;
+                behaviourDuration = 3f;
+                break;
+            case 1:
+                strengthModifier = 1f;
+                behaviourDuration = 5f;
+                break;
+            case 2:
+                strengthModifier = 1.5f;
+                behaviourDuration = 8f;
+                break;
         }
+        StartCoroutine(RechargeActivation(behaviourDuration, strengthModifier));
     }
 
-    private IEnumerator RechargeActivation()
+    private IEnumerator RechargeActivation(float duration, float strengthModifier)
     {
-        torque = activeTorqueStrength;
-        yield return new WaitForSeconds(5f);
+        torque = activeTorqueStrength * strengthModifier;
+        yield return new WaitForSeconds(duration);
         torque = idleTorqueStrength;
     }
 }

@@ -9,10 +9,13 @@ public class WhaleMovement : MonoBehaviour
     [SerializeField] private float glowDuration;
     private float glowStrength = 0f;
     public bool isGlowing;
+    private BehaviourTrigger behaviourTrigger;
 
     void Start()
     {
         meshRenderer.materials[1] = new Material(meshRenderer.materials[1]);
+        behaviourTrigger = GetComponent<BehaviourTrigger>();
+        behaviourTrigger.OnBehaviourTriggered += TriggerBehaviour;
     }
 
     void Update()
@@ -47,9 +50,9 @@ public class WhaleMovement : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookDirection), turnSpeed * Time.deltaTime);
     }
 
-    void OnTriggerEnter(Collider other)
+    private void TriggerBehaviour(int strength)
     {
-        if (other.gameObject.CompareTag("InteractionZone") && !isGlowing)
+        if (!isGlowing)
         {
             isGlowing = true;
         }

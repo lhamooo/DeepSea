@@ -1370,6 +1370,7 @@ GameObject:
   - component: {fileID: 1018713132}
   - component: {fileID: 1018713131}
   - component: {fileID: 1018713130}
+  - component: {fileID: 1018713135}
   m_Layer: 0
   m_Name: WhaleTarget
   m_TagString: Untagged
@@ -1397,6 +1398,8 @@ MonoBehaviour:
   huntSpeed: 2
   huntingTurnSpeedModifier: 2
   prey: {fileID: 0}
+  particleTimeInSeconds: 0
+  particleSystem: {fileID: 0}
 --- !u!65 &1018713131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1490,6 +1493,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1018713135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018713129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876c9b5248a4d0748825ee492218e8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BehaviourTrigger
 --- !u!137 &1051466727 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7442557247907069935, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
@@ -1879,6 +1894,8 @@ MonoBehaviour:
   huntSpeed: 2
   huntingTurnSpeedModifier: 2
   prey: {fileID: 0}
+  particleTimeInSeconds: 0
+  particleSystem: {fileID: 0}
 --- !u!114 &1217435856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1896,6 +1913,7 @@ MonoBehaviour:
   turnSpeedModifier: 0.5
   meshRenderer: {fileID: 0}
   glowDuration: 0
+  isGlowing: 0
 --- !u!1 &1218655980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2047,6 +2065,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1254005011}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1254005012}
   m_SourcePrefab: {fileID: 100100000, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
 --- !u!1 &1254005003 stripped
 GameObject:
@@ -2070,6 +2091,7 @@ MonoBehaviour:
   turnSpeedModifier: 0.3
   meshRenderer: {fileID: 1051466727}
   glowDuration: 2
+  isGlowing: 0
 --- !u!4 &1254005005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
@@ -2215,6 +2237,18 @@ CapsuleCollider:
   m_Height: 0.11232454
   m_Direction: 1
   m_Center: {x: 0, y: 0.037736814, z: -0.047062606}
+--- !u!114 &1254005012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254005003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876c9b5248a4d0748825ee492218e8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BehaviourTrigger
 --- !u!4 &1281954022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6366067180219985710, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}

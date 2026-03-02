@@ -55,5 +55,9 @@ public class InteractionRadius : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.tag + " activated!");
+        if (other.gameObject.CompareTag("Behaviour"))
+        {
+            other.GetComponent<BehaviourTrigger>().TriggerBehaviour(1);
+        }
     }
 }
