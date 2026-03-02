@@ -48,7 +48,11 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: -50
     m_Colors:
+<<<<<<< HEAD
+    - _EmissionColor: {r: 6.27451, g: 3.2627451, b: 56.21961, a: 0}
+=======
     - _EmissionColor: {r: 2.9808867, g: 2.9808867, b: 63.194965, a: 1}
+>>>>>>> cc9e04f988f3bd9a462e0eda57efd62bcee2cdea
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4142404428968282530
