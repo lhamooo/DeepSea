@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class SwarmManager : MonoBehaviour
     [SerializeField] private float alignmentWeight = 1f;
     [SerializeField] private float separationRadius = 2f;
     [SerializeField] private float maxDistanceFromZero = 30f;
+
+    private bool isActivated = false;
 
     void Start()
     {
@@ -63,11 +66,29 @@ public class SwarmManager : MonoBehaviour
         List<Boid> neighbors = new List<Boid>();
         foreach (Boid otherBoid in boids)
         {
-            if (otherBoid != boid && Vector3.Distance(boid.transform.position, otherBoid.transform.position) < radius && boids.Contains(otherBoid))
+            if (otherBoid != boid && Vector3.Distance(boid.transform.position, otherBoid.transform.position) < radius)
             {
-                neighbors.Add(otherBoid);
+                if (isActivated || boids.Contains(otherBoid))
+                {
+                    neighbors.Add(otherBoid);
+                }
             }
         }
         return neighbors.ToArray();
+    }
+
+    public void ActivateSwarm(float activationTime)
+    {
+        if (!isActivated)
+        {
+            isActivated = true;
+            StartCoroutine(RechargeActivation(activationTime));
+        }
+    }
+
+    private IEnumerator RechargeActivation(float activationTime)
+    {
+        yield return new WaitForSeconds(activationTime);
+        isActivated = false;
     }
 }

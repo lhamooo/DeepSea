@@ -12,15 +12,28 @@ public class FishMovement : MonoBehaviour
     [SerializeField] private float huntSpeed = 2f;
     [SerializeField] private float huntingTurnSpeedModifier = 2f;
     [SerializeField] private GameObject prey;
+
+    [Header("Particles")]
+    [SerializeField] private float particleTimeInSeconds;
+    [SerializeField] private new ParticleSystem particleSystem;
     private bool isHunting = false;
     private bool hasTarget = false;
     private float currentMoveSpeed;
     private float currentTurnSpeedModifier;
+    private BehaviourTrigger behaviourTrigger;
 
     void Start()
     {
         currentMoveSpeed = moveSpeed;
         currentTurnSpeedModifier = turnSpeedModifier;
+        if (canHunt)
+        {
+            behaviourTrigger = GetComponent<BehaviourTrigger>();
+            behaviourTrigger.OnBehaviourTriggered += TriggerBehaviour;
+            particleSystem.Stop();
+            var main = particleSystem.main;
+            main.duration = particleTimeInSeconds;
+        }
     }
 
     void Update()
@@ -92,19 +105,43 @@ public class FishMovement : MonoBehaviour
                 closestBoid = boid;
             }
         }
-
         return closestBoid;
+    }
+
+    private void TriggerBehaviour(int strength)
+    {
+        float strengthModifier = 1f;
+        switch (strength)
+        {
+            case 0:
+                strengthModifier = 0.8f;
+                break;
+            case 1:
+                strengthModifier = 1f;
+                break;
+            case 2:
+                strengthModifier = 1.5f;
+                break;
+        }
+        if (canHunt)
+        {
+            isHunting = true;
+            currentMoveSpeed = huntSpeed * strengthModifier;
+            currentTurnSpeedModifier = huntingTurnSpeedModifier * strengthModifier;
+            Debug.Log("Triggered behaviour with Strength " + strength);
+
+            if (!particleSystem.isPlaying)
+            {
+                var main = particleSystem.main;
+                main.duration = particleTimeInSeconds * strengthModifier;
+                particleSystem.Play();
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("InteractionZone") && canHunt)
-        {
-            isHunting = true;
-            currentMoveSpeed = huntSpeed;
-            currentTurnSpeedModifier = huntingTurnSpeedModifier;
-        }
-        else if (isHunting && other.gameObject == prey)
+        if (isHunting && other.gameObject == prey)
         {
             Debug.Log("Prey reached");
             Destroy(other.gameObject);
