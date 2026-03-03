@@ -5,10 +5,10 @@ public class InteractionRadius : MonoBehaviour
 {
     [SerializeField] private SwarmManager[] swarmManagers;
     [SerializeField] private float swarmActivationTime;
-    private float expansionStrength;
+    private float expansionStrength = 10f;
     private float expansionDuration = 10f;
     public bool isExpanding = false;
-    private int timer;
+    private int timer = 0;
     private SphereCollider sphereCollider;
     private int currentStrength;
     void Start()
@@ -19,14 +19,9 @@ public class InteractionRadius : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.spaceKey.isPressed && timer == 0)
-        {
-            isExpanding = true;
-            sphereCollider.enabled = true;
-            expansionStrength++;
-        }
 
-        else if (isExpanding)
+
+        if (isExpanding)
         {
             if (timer == 0)
             {
@@ -38,9 +33,10 @@ public class InteractionRadius : MonoBehaviour
 
             if (timer < expansionDuration * 10)
             {
+                Debug.Log("Expanding... Timer: " + timer);
                 timer++;
                 Vector3 s = transform.localScale;
-                Vector3 newScale = new Vector3(s.x + 0.005f * expansionStrength, s.y + 0.005f * expansionStrength, s.z + 0.005f * expansionStrength);
+                Vector3 newScale = new Vector3(s.x + 1f, s.y + 1f, s.z + 1f);
                 transform.localScale = newScale;
             }
             else
@@ -69,7 +65,12 @@ public class InteractionRadius : MonoBehaviour
             currentStrength = 2;
         }
 
-        expansionDuration = result.leds;
+        if (!isExpanding)
+        {
+            expansionDuration = result.leds;
+            isExpanding = true;
+            sphereCollider.enabled = true;
+        }
     }
 
     void OnTriggerEnter(Collider other)

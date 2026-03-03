@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639081336166635826
+  lastModified: 639080584118908994
   FileSizes:
   - Name: Desktop
     Value: 998
@@ -74,7 +74,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -7032045676784838978}
   cacheVersion: 131858
-  cacheTime: 639081340373322940
+  cacheTime: 639081413880706443
   SerializableEventsDict:
   - key: event:/pump/Pump-Base sound
     index: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639081340373322940
+  lastModified: 639081413880706443
   FileSizes:
   - Name: Desktop
     Value: 13268000
@@ -146,7 +146,7 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639081336166620606
+  lastModified: 639080584118907583
   FileSizes:
   - Name: Desktop
     Value: 1074
