@@ -65,17 +65,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sounds\fmod-test\Metadata\Workspace.xml" />
+    <None Include="Assets\Sounds\fmod-test\Metadata\Event\{a6a8f232-f463-4e63-bf34-16890bf755d2}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{02a53ded-0ed0-4651-9570-b7d222af5f7c}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{7b67d7e1-0519-4469-bdd1-5ac659f129cf}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\Asset\{df4a2fa9-d784-48d1-b04b-a99789e87435}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\Bank\{685409b6-b018-424b-9ae9-116ecb338a2f}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\Bank\{555a779e-78f3-4b6c-bc69-fccc93f793c0}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\EventFolder\{5fee248f-a84a-4ec9-97a6-aa7b590db31a}.xml" />
+    <None Include="Assets\Sounds\fmod-test\Metadata\Event\{38e9738e-1e7f-4cec-bbbf-eae2259e71d1}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{480e5c91-dd80-4f66-be10-278c6c68cf16}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{a16f1290-6938-4e61-9f33-18be53cd274b}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\Master.xml" />
+    <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{ac68435b-c3fb-4f56-8fdb-a9e0898d9dfa}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\EncodingSetting\{c7b72c05-b2b5-4f15-966d-986baa8aa60a}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\Event\{6333dea7-ee87-4d24-bb98-1579fa423d2b}.xml" />
+    <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{c4b8d746-bf24-4cec-a516-a54c2a374428}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\EventFolder\{1b83ac6b-4ab9-4fa0-aff5-3bc4f4991069}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{c0c42c1d-f250-4608-b62d-10548ec23936}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{15aa5130-757a-46f7-8f04-f11c4f9ba46a}.xml" />
@@ -105,8 +109,10 @@
     <None Include="Assets\Sounds\fmod-test\Metadata\Tags.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\ParameterPresetFolder\{65c11779-b6f8-4f38-9d35-57117d038b5b}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\Event\{3dd20603-9bb4-4448-9081-dab6c4304dd6}.xml" />
+    <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{7ebf6423-0738-4ecb-b874-c82dff7a0078}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{5dc942b1-4632-45b1-b30c-d9093302884b}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{463b4221-8126-4f3c-9963-6023057fd71b}.xml" />
+    <None Include="Assets\Sounds\fmod-test\Metadata\Event\{38e64dae-3979-4a5b-9bd7-e92b071b02a8}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\SandboxFolder\{71382047-8998-40c5-8b61-80dd16182921}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\Asset\{8fb0eab6-195f-4d76-8b3d-1cf3ea37977c}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\Mixer.xml" />
@@ -121,6 +127,7 @@
     <None Include="Assets\Sounds\fmod-test\Metadata\EventFolder\{ac2ca186-851c-43fc-9c80-cbddf9a2134a}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\Return\{7fb70e51-2e4c-4294-8021-9415d065f88c}.xml" />
     <None Include="Assets\Sounds\fmod-test\Metadata\AudioFile\{d965aed0-d33e-4e39-955c-4f86f726fbd2}.xml" />
+    <None Include="Assets\Sounds\fmod-test\Metadata\Asset\{f390d756-bcb5-4cb7-96dc-1a54d7cf3e8d}.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

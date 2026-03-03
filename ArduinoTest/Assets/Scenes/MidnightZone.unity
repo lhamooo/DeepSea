@@ -1966,6 +1966,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 0}
   glowDuration: 0
   isGlowing: 0
+  fmodEvents: []
 --- !u!1 &1218655980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,12 +2114,6 @@ PrefabInstance:
       addedObject: {fileID: 1254005009}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1254005008}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1254005011}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1254005012}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       insertIndex: -1
@@ -2147,6 +2142,10 @@ MonoBehaviour:
   meshRenderer: {fileID: 1051466727}
   glowDuration: 2
   isGlowing: 0
+  fmodEvents:
+  - event:/whale/whale-01
+  - event:/whale/whale-02
+  - event:/whale/whale-03
 --- !u!4 &1254005005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
@@ -2190,28 +2189,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!64 &1254005008
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254005003}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3471571782477617947, guid: a31055f29bae840e4b3094179c96a2c5, type: 3}
 --- !u!23 &1254005009
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2269,7 +2246,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254005003}
   m_Mesh: {fileID: 3471571782477617947, guid: a31055f29bae840e4b3094179c96a2c5, type: 3}
---- !u!136 &1254005011
+--- !u!114 &1254005012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254005003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876c9b5248a4d0748825ee492218e8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BehaviourTrigger
+--- !u!136 &1254005013
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2288,53 +2277,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.67
-  m_Height: 0.11232454
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.037736814, z: -0.047062606}
---- !u!114 &1254005012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254005003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 876c9b5248a4d0748825ee492218e8d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BehaviourTrigger
---- !u!114 &1254005013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254005003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: InteractionZone
-  EventReference:
-    Guid:
-      Data1: -553676946
-      Data2: 1201621227
-      Data3: -1535229288
-      Data4: -515999616
-    Path: event:/whale/whale-activated
-  Event: 
-  EventPlayTrigger: 3
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  m_Radius: 1.31
+  m_Height: 5.18
+  m_Direction: 2
+  m_Center: {x: 0, y: -1.55, z: -0.047062606}
 --- !u!4 &1281954022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6366067180219985710, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}

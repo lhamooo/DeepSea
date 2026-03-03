@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639081336166635826
+  lastModified: 639081490180438092
   FileSizes:
   - Name: Desktop
-    Value: 998
+    Value: 1118
   Exists: 1
 --- !u!114 &-4405909475606868644
 MonoBehaviour:
@@ -47,6 +47,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 54600
+--- !u!114 &-2075767599443636450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/whale/whale-02
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/whale/whale-02
+  Guid:
+    Data1: 954617262
+    Data2: 1247492473
+    Data3: 736745371
+    Data4: -1476257017
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5282
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,13 +95,16 @@ MonoBehaviour:
   - {fileID: 7345815261491807655}
   - {fileID: 7894724378074082947}
   - {fileID: -4405909475606868644}
+  - {fileID: 1189366877725609449}
+  - {fileID: 6514112466006038433}
+  - {fileID: -2075767599443636450}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5908602772353458344}
   StringsBanks:
   - {fileID: -7032045676784838978}
   cacheVersion: 131858
-  cacheTime: 639081340373322940
+  cacheTime: 639081490182155474
   SerializableEventsDict:
   - key: event:/pump/Pump-Base sound
     index: 0
@@ -84,6 +114,39 @@ MonoBehaviour:
     index: 2
   - key: event:/ambience/underwater-loop
     index: 3
+  - key: event:/whale/whale-03
+    index: 4
+  - key: event:/whale/whale-01
+    index: 5
+  - key: event:/whale/whale-02
+    index: 6
+--- !u!114 &1189366877725609449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/whale/whale-03
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/whale/whale-03
+  Guid:
+    Data1: -1498877390
+    Data2: 1315173475
+    Data3: -1995033409
+    Data4: -766118133
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4426
 --- !u!114 &4476181089517419945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,10 +189,10 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639081340373322940
+  lastModified: 639081490182155474
   FileSizes:
   - Name: Desktop
-    Value: 13268000
+    Value: 13341472
   Exists: 1
 --- !u!114 &5908602772353458344
 MonoBehaviour:
@@ -146,11 +209,38 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639081336166620606
+  lastModified: 639081490180438092
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
+--- !u!114 &6514112466006038433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/whale/whale-01
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/whale/whale-01
+  Guid:
+    Data1: 954823566
+    Data2: 1290542719
+    Data3: -487931973
+    Data4: -781083099
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5782
 --- !u!114 &7345815261491807655
 MonoBehaviour:
   m_ObjectHideFlags: 0

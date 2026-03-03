@@ -1,14 +1,21 @@
+using FMODUnityResonance;
 using UnityEngine;
 
 public class WhaleMovement : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private Transform target;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float turnSpeedModifier = 0.5f;
+
+    [Header("Glow Shader")]
     [SerializeField] SkinnedMeshRenderer meshRenderer;
     [SerializeField] private float glowDuration;
-    private float glowStrength = 0f;
     public bool isGlowing;
+
+    [Header("Sounds")]
+    [SerializeField] private string[] fmodEvents;
+    private float glowStrength = 0f;
     private BehaviourTrigger behaviourTrigger;
 
     void Start()
@@ -52,6 +59,9 @@ public class WhaleMovement : MonoBehaviour
 
     private void TriggerBehaviour(int strength)
     {
+        int randomSoundIndex = Random.Range(0, fmodEvents.Length - 1);
+        Debug.Log("Played sound: " + fmodEvents[randomSoundIndex]);
+        FMODUnity.RuntimeManager.PlayOneShot(fmodEvents[randomSoundIndex], transform.position);
         if (!isGlowing)
         {
             isGlowing = true;

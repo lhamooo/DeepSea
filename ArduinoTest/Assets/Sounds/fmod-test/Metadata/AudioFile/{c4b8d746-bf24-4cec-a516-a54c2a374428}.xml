@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{c4b8d746-bf24-4cec-a516-a54c2a374428}">
+		<property name="assetPath">
+			<value>Whale/whale_song_02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.782125</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fea6ceeb-1b18-44dd-b903-1b22b66f2b7c}</destination>
+		</relationship>
+	</object>
+</objects>
