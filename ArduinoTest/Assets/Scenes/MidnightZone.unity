@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e656f6e5e87a8d40a1867f4ac23c328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwarmManager
-  boidPrefab: {fileID: 6123276601998563570, guid: fc9255c754f52d34a9e4ae667f05a2b8, type: 3}
+  boidPrefab: {fileID: 5167381067160104646, guid: 20418df2f9b2c644d8c0d1a69dadd335, type: 3}
   swarmSize: 20
   boids: []
   cohesionWeight: 1
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e656f6e5e87a8d40a1867f4ac23c328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwarmManager
-  boidPrefab: {fileID: 6123276601998563570, guid: fc9255c754f52d34a9e4ae667f05a2b8, type: 3}
+  boidPrefab: {fileID: 5167381067160104646, guid: 20418df2f9b2c644d8c0d1a69dadd335, type: 3}
   swarmSize: 20
   boids: []
   cohesionWeight: 1
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e656f6e5e87a8d40a1867f4ac23c328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwarmManager
-  boidPrefab: {fileID: 6123276601998563570, guid: fc9255c754f52d34a9e4ae667f05a2b8, type: 3}
+  boidPrefab: {fileID: 5167381067160104646, guid: 20418df2f9b2c644d8c0d1a69dadd335, type: 3}
   swarmSize: 20
   boids: []
   cohesionWeight: 1
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e656f6e5e87a8d40a1867f4ac23c328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwarmManager
-  boidPrefab: {fileID: 6123276601998563570, guid: fc9255c754f52d34a9e4ae667f05a2b8, type: 3}
+  boidPrefab: {fileID: 5167381067160104646, guid: 20418df2f9b2c644d8c0d1a69dadd335, type: 3}
   swarmSize: 20
   boids: []
   cohesionWeight: 1

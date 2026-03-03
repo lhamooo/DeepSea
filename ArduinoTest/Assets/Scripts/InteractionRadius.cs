@@ -6,7 +6,7 @@ public class InteractionRadius : MonoBehaviour
     [SerializeField] private SwarmManager[] swarmManagers;
     [SerializeField] private float swarmActivationTime;
     private float expansionStrength;
-    private float expansionDuration;
+    private float expansionDuration = 10f;
     public bool isExpanding = false;
     private int timer;
     private SphereCollider sphereCollider;
@@ -36,7 +36,7 @@ public class InteractionRadius : MonoBehaviour
                 }
             }
 
-            if (timer < expansionDuration)
+            if (timer < expansionDuration * 10)
             {
                 timer++;
                 Vector3 s = transform.localScale;
