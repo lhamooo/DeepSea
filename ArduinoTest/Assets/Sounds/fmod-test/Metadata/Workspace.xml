@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Workspace" id="{8e312335-ed1a-4acc-9197-acfb0b3a9ab4}">
 		<property name="builtBanksOutputDirectory">
-			<value>../../../../../Desktop/251031-Digital-Play/Unity Einführung/My project/FMOD</value>
+			<value>Build</value>
 		</property>
 		<relationship name="masterEventFolder">
 			<destination>{a42ac343-547d-48d1-8951-8b89e6d32555}</destination>
