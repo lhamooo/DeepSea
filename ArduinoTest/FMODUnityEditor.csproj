@@ -61,6 +61,7 @@
     <Compile Include="Assets\Plugins\FMOD\src\Editor\BankRefDrawer.cs" />
     <Compile Include="Assets\Plugins\FMOD\src\Editor\SetupWizard.cs" />
     <Compile Include="Assets\Plugins\FMOD\src\Editor\EditorEventRef.cs" />
+    <Compile Include="Assets\Plugins\FMOD\src\Editor\Localization.cs" />
     <Compile Include="Assets\Plugins\FMOD\src\Editor\StudioBankLoaderEditor.cs" />
     <Compile Include="Assets\Plugins\FMOD\src\Editor\BankRefresher.cs" />
     <Compile Include="Assets\Plugins\FMOD\src\Editor\EventManager.cs" />
