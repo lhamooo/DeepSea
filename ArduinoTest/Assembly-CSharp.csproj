@@ -52,7 +52,6 @@
     <Compile Include="Assets/Scripts/Swarm/Boid.cs" />
     <Compile Include="Assets/Scripts/CameraMovement.cs" />
     <Compile Include="Assets/Scripts/WormParticles.cs" />
-    <Compile Include="Assets/ArduinoConnector.cs" />
     <Compile Include="Assets/Scripts/Spawner.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/Scripts/FishMovement.cs" />
@@ -61,6 +60,7 @@
     <Compile Include="Assets/Scripts/BehaviourTrigger.cs" />
     <Compile Include="Assets/meshHeightCalculator.cs" />
     <Compile Include="Assets/Scripts/Swarm/SwarmManager.cs" />
+    <Compile Include="Assets/Scripts/ArduinoStuff.cs" />
     <Compile Include="Assets/Scripts/InteractionRadius.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +112,7 @@
     <None Include="Assets/Sounds/fmod-test/Metadata/Mixer.xml" />
     <None Include="Assets/Sounds/fmod-test/Metadata/AudioFile/{18d69688-b1c4-4146-8b22-b0d32b1dea21}.xml" />
     <None Include="Assets/Sounds/fmod-test/Metadata/AudioFile/{e7606a9b-699f-416a-903a-13060b8aad53}.xml" />
+    <None Include="Assets/Sounds/fmod-test/Metadata/Event/{871af654-417c-4718-b522-335059492da7}.xml" />
     <None Include="Assets/Sounds/fmod-test/Metadata/AudioFile/{9443a46b-2fb3-4e18-bdb8-a2375dbbf14c}.xml" />
     <None Include="Assets/Sounds/fmod-test/Metadata/Asset/{779664e5-3010-456d-95a2-0cc8fbc93479}.xml" />
     <None Include="Assets/Sounds/fmod-test/Metadata/AudioFile/{9e97d749-e8ad-4f91-bfaa-d7e79f9dd57e}.xml" />
@@ -1425,6 +1426,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="FMODUnityEditor.csproj" />
+    <ProjectReference Include="FMODUnityHaptics.csproj" />
     <ProjectReference Include="FMODUnityResonance.csproj" />
     <ProjectReference Include="FMODUnity.csproj" />
     <ProjectReference Include="FMODUnityResonanceEditor.csproj" />

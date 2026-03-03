@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 155349768}
   - component: {fileID: 155349767}
   - component: {fileID: 155349770}
+  - component: {fileID: 155349771}
   m_Layer: 0
   m_Name: InteractionZone
   m_TagString: InteractionZone
@@ -310,6 +311,7 @@ MonoBehaviour:
   - {fileID: 328336828}
   - {fileID: 82516455}
   swarmActivationTime: 10
+  isExpanding: 0
 --- !u!135 &155349768
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -373,6 +375,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &155349771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155349766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a514d3d2f4ff47aa82da7fac531ed41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArduinoStuff
 --- !u!1 &184769682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,6 +1664,7 @@ GameObject:
   - component: {fileID: 1098504950}
   - component: {fileID: 1098504951}
   - component: {fileID: 1098504952}
+  - component: {fileID: 1098504953}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1670,7 +1685,7 @@ Camera:
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
@@ -1794,6 +1809,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!114 &1098504953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098504946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1664343719
+      Data2: 1294265991
+      Data3: 2031458491
+      Data4: 725435130
+    Path: event:/ambience/underwater-loop
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1178233072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4391734452912474718, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
@@ -2074,6 +2120,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1254005012}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1254005013}
   m_SourcePrefab: {fileID: 100100000, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
 --- !u!1 &1254005003 stripped
 GameObject:
@@ -2255,6 +2304,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876c9b5248a4d0748825ee492218e8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BehaviourTrigger
+--- !u!114 &1254005013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254005003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: InteractionZone
+  EventReference:
+    Guid:
+      Data1: -553676946
+      Data2: 1201621227
+      Data3: -1535229288
+      Data4: -515999616
+    Path: event:/whale/whale-activated
+  Event: 
+  EventPlayTrigger: 3
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1281954022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6366067180219985710, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
