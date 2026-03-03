@@ -3,7 +3,7 @@ using System.IO.Ports;
 using System.Threading;
 
 [System.Serializable]
-class ArduinoResult
+public class ArduinoResult
 {
     public string geschwindigkeit;
     public int leds;
@@ -12,12 +12,13 @@ class ArduinoResult
 public class ArduinoStuff : MonoBehaviour
 {
     SerialPort serialPort = new SerialPort("/dev/cu.usbmodem101", 9600);
-
     Renderer rend;
+    private InteractionRadius interactionZone;
 
     void Start()
     {
         rend = GetComponent<Renderer>();
+        interactionZone = GetComponent<InteractionRadius>();
 
         serialPort.ReadTimeout = 50;
         serialPort.Open();

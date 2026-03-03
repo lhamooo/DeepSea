@@ -5,7 +5,7 @@
 			<value>whale-activated</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{1b83ac6b-4ab9-4fa0-aff5-3bc4f4991069}</destination>
@@ -113,6 +113,7 @@
 	<object class="MixerBusEffectChain" id="{371ee677-91d7-407a-a421-95f6e1959433}">
 		<relationship name="effects">
 			<destination>{2ef6ac46-2d0f-419b-b43b-5ef892d28ec4}</destination>
+			<destination>{700d99fc-93f8-4a8e-b6d4-e4367b596c9d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6c91b68f-a6cd-4ea3-b94e-c20e040079f3}" />
@@ -124,5 +125,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{582a6e7f-7cd8-4f9b-9a11-b694cf5ebaf0}" />
 	<object class="MixerBusFader" id="{2ef6ac46-2d0f-419b-b43b-5ef892d28ec4}" />
+	<object class="SpatialiserEffect" id="{700d99fc-93f8-4a8e-b6d4-e4367b596c9d}" />
 	<object class="MixerBusFader" id="{09c4dc7e-7850-4cf4-a5ce-a67edc4bb310}" />
 </objects>

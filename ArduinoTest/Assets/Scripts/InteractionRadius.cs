@@ -6,9 +6,11 @@ public class InteractionRadius : MonoBehaviour
     [SerializeField] private SwarmManager[] swarmManagers;
     [SerializeField] private float swarmActivationTime;
     private float expansionStrength;
-    private bool isExpanding = false;
+    private float expansionDuration;
+    public bool isExpanding = false;
     private int timer;
     private SphereCollider sphereCollider;
+    private int currentStrength;
     void Start()
     {
         sphereCollider = GetComponent<SphereCollider>();
@@ -23,6 +25,7 @@ public class InteractionRadius : MonoBehaviour
             sphereCollider.enabled = true;
             expansionStrength++;
         }
+
         else if (isExpanding)
         {
             if (timer == 0)
@@ -33,11 +36,11 @@ public class InteractionRadius : MonoBehaviour
                 }
             }
 
-            if (timer < expansionStrength)
+            if (timer < expansionDuration)
             {
                 timer++;
                 Vector3 s = transform.localScale;
-                Vector3 newScale = new Vector3(s.x + 0.001f * expansionStrength, s.y + 0.001f * expansionStrength, s.z + 0.001f * expansionStrength);
+                Vector3 newScale = new Vector3(s.x + 0.005f * expansionStrength, s.y + 0.005f * expansionStrength, s.z + 0.005f * expansionStrength);
                 transform.localScale = newScale;
             }
             else
@@ -48,8 +51,25 @@ public class InteractionRadius : MonoBehaviour
                 isExpanding = false;
                 sphereCollider.enabled = false;
             }
-
         }
+    }
+
+    public void StartInteraction(ArduinoResult result)
+    {
+        if (result.geschwindigkeit == "slow")
+        {
+            currentStrength = 0;
+        }
+        else if (result.geschwindigkeit == "middle")
+        {
+            currentStrength = 1;
+        }
+        else if (result.geschwindigkeit == "fast")
+        {
+            currentStrength = 2;
+        }
+
+        expansionDuration = result.leds;
     }
 
     void OnTriggerEnter(Collider other)
@@ -57,7 +77,7 @@ public class InteractionRadius : MonoBehaviour
         Debug.Log(other.gameObject.tag + " activated!");
         if (other.gameObject.CompareTag("Behaviour"))
         {
-            other.GetComponent<BehaviourTrigger>().TriggerBehaviour(1);
+            other.GetComponent<BehaviourTrigger>().TriggerBehaviour(currentStrength);
         }
     }
 }

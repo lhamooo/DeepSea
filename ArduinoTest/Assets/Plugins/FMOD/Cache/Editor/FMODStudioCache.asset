@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639080579842530498
+  lastModified: 639081336166635826
   FileSizes:
   - Name: Desktop
     Value: 998
@@ -74,7 +74,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -7032045676784838978}
   cacheVersion: 131858
-  cacheTime: 639080579843317887
+  cacheTime: 639081340373322940
   SerializableEventsDict:
   - key: event:/pump/Pump-Base sound
     index: 0
@@ -126,10 +126,10 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639080579843317887
+  lastModified: 639081340373322940
   FileSizes:
   - Name: Desktop
-    Value: 13293280
+    Value: 13268000
   Exists: 1
 --- !u!114 &5908602772353458344
 MonoBehaviour:
@@ -146,7 +146,7 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639080579842515344
+  lastModified: 639081336166620606
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -199,7 +199,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 4736728307235852953}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
