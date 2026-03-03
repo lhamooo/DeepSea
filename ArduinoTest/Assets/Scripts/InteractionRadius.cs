@@ -19,8 +19,11 @@ public class InteractionRadius : MonoBehaviour
 
     void Update()
     {
-
-
+        if (Keyboard.current.spaceKey.isPressed && timer == 0)
+        {
+            isExpanding = true;
+            sphereCollider.enabled = true;
+        }
         if (isExpanding)
         {
             if (timer == 0)
@@ -33,7 +36,6 @@ public class InteractionRadius : MonoBehaviour
 
             if (timer < expansionDuration * 10)
             {
-                Debug.Log("Expanding... Timer: " + timer);
                 timer++;
                 Vector3 s = transform.localScale;
                 Vector3 newScale = new Vector3(s.x + 1f, s.y + 1f, s.z + 1f);
