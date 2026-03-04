@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="DataFile" id="{5079b866-074e-46eb-8b3b-348eaf403d35}">
+		<property name="assetPath">
+			<value>random-playable/sound-9.pkf</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fea6ceeb-1b18-44dd-b903-1b22b66f2b7c}</destination>
+		</relationship>
+	</object>
+</objects>

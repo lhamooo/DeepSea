@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{f7525dad-2a83-4e79-a744-1c493181720f}">
+		<property name="assetPath">
+			<value>random-playable/sound-8.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>13.892895833333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fea6ceeb-1b18-44dd-b903-1b22b66f2b7c}</destination>
+		</relationship>
+	</object>
+</objects>

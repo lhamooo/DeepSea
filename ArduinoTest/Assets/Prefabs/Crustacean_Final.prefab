@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crustacean_Final
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c07d53b22e42b4fb19298c5fb08c05f2, type: 3}
+      propertyPath: m_TagString
+      value: Boid
+      objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: c07d53b22e42b4fb19298c5fb08c05f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

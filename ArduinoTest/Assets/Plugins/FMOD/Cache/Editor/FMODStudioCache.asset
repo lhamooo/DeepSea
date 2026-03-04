@@ -15,11 +15,38 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639081490180438092
+  lastModified: 639082354845792691
   FileSizes:
   - Name: Desktop
-    Value: 1118
+    Value: 1570
   Exists: 1
+--- !u!114 &-6658236829651319547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-04
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-04
+  Guid:
+    Data1: 268139320
+    Data2: 1278365716
+    Data3: 2140512175
+    Data4: 168076341
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 2676
 --- !u!114 &-4405909475606868644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +74,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 54600
+--- !u!114 &-2923695822953947737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-10
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-10
+  Guid:
+    Data1: 1441519364
+    Data2: 1219131943
+    Data3: -944565099
+    Data4: 70918153
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 20158
 --- !u!114 &-2075767599443636450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,8 +126,35 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 5282
+--- !u!114 &-871991361391199245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-02
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-02
+  Guid:
+    Data1: -101897098
+    Data2: 1222176601
+    Data3: -364948560
+    Data4: -491162419
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 8832
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,13 +179,25 @@ MonoBehaviour:
   - {fileID: 1189366877725609449}
   - {fileID: 6514112466006038433}
   - {fileID: -2075767599443636450}
+  - {fileID: 757692957309225464}
+  - {fileID: -6658236829651319547}
+  - {fileID: 2895991929180755338}
+  - {fileID: -871991361391199245}
+  - {fileID: 252291375056228193}
+  - {fileID: 2989676567754607117}
+  - {fileID: 3396549554218362492}
+  - {fileID: 7168165547248429997}
+  - {fileID: -2923695822953947737}
+  - {fileID: 5152153439160571683}
+  - {fileID: 7626597563550318829}
+  - {fileID: 5926086871034095782}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5908602772353458344}
   StringsBanks:
   - {fileID: -7032045676784838978}
   cacheVersion: 131858
-  cacheTime: 639081490182155474
+  cacheTime: 639082354849631475
   SerializableEventsDict:
   - key: event:/pump/Pump-Base sound
     index: 0
@@ -120,6 +213,84 @@ MonoBehaviour:
     index: 5
   - key: event:/whale/whale-02
     index: 6
+  - key: event:/pump/Pump-sound
+    index: 7
+  - key: event:/ambience/Random/random-04
+    index: 8
+  - key: event:/ambience/Random/random-06
+    index: 9
+  - key: event:/ambience/Random/random-02
+    index: 10
+  - key: event:/ambience/Random/random-03
+    index: 11
+  - key: event:/ambience/Random/random-07
+    index: 12
+  - key: event:/ambience/Random/random-01
+    index: 13
+  - key: event:/ambience/Random/random-05
+    index: 14
+  - key: event:/ambience/Random/random-10
+    index: 15
+  - key: event:/ambience/Random/random-09
+    index: 16
+  - key: event:/ambience/Random/random-08
+    index: 17
+  - key: event:/ambience/Random/random-11
+    index: 18
+--- !u!114 &252291375056228193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-03
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-03
+  Guid:
+    Data1: -763108217
+    Data2: 1326443150
+    Data3: 588246700
+    Data4: -1657141712
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 26720
+--- !u!114 &757692957309225464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/pump/Pump-sound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/pump/Pump-sound
+  Guid:
+    Data1: 466341102
+    Data2: 1187609918
+    Data3: 1151043763
+    Data4: 231485491
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1691
 --- !u!114 &1189366877725609449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +316,89 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 4426
+--- !u!114 &2895991929180755338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-06
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-06
+  Guid:
+    Data1: -808281537
+    Data2: 1238853486
+    Data3: 906781067
+    Data4: 1794135128
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 13892
+--- !u!114 &2989676567754607117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-07
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-07
+  Guid:
+    Data1: -526272588
+    Data2: 1342106315
+    Data3: 1192316071
+    Data4: -242020556
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 13722
+--- !u!114 &3396549554218362492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-01
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-01
+  Guid:
+    Data1: -776706884
+    Data2: 1160217021
+    Data3: 1533195414
+    Data4: -1164244889
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 26720
 --- !u!114 &4476181089517419945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,11 +441,38 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639081490182155474
+  lastModified: 639082354849631475
   FileSizes:
   - Name: Desktop
-    Value: 13341472
+    Value: 14377120
   Exists: 1
+--- !u!114 &5152153439160571683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-09
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-09
+  Guid:
+    Data1: -1493927555
+    Data2: 1314545765
+    Data3: -980017770
+    Data4: -1135133732
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 20000
 --- !u!114 &5908602772353458344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,11 +488,38 @@ MonoBehaviour:
   Path: Assets/Sounds/fmod-test/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639081490180438092
+  lastModified: 639082354845772669
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
+--- !u!114 &5926086871034095782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-11
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-11
+  Guid:
+    Data1: 2063587572
+    Data2: 1121230688
+    Data3: 1239146883
+    Data4: 917239401
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 19605
 --- !u!114 &6514112466006038433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,8 +545,35 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 50
   Length: 5782
+--- !u!114 &7168165547248429997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-05
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-05
+  Guid:
+    Data1: -1544389898
+    Data2: 1282815928
+    Data3: -2143266902
+    Data4: 1073898161
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 10935
 --- !u!114 &7345815261491807655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +601,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6000
+--- !u!114 &7626597563550318829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/Random/random-08
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/Random/random-08
+  Guid:
+    Data1: 1796129249
+    Data2: 1308668602
+    Data3: -1107747140
+    Data4: -1681590485
+  Banks:
+  - {fileID: 4736728307235852953}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 19605
 --- !u!114 &7894724378074082947
 MonoBehaviour:
   m_ObjectHideFlags: 0

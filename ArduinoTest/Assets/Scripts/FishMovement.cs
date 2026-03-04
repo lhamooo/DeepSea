@@ -16,7 +16,7 @@ public class FishMovement : MonoBehaviour
     [Header("Particles")]
     [SerializeField] private float particleTimeInSeconds;
     [SerializeField] private new ParticleSystem particleSystem;
-    private bool isHunting = false;
+    public bool isHunting = false;
     private bool hasTarget = false;
     private float currentMoveSpeed;
     private float currentTurnSpeedModifier;
@@ -54,6 +54,7 @@ public class FishMovement : MonoBehaviour
 
         if (Vector3.Distance(transform.position, currentTarget) < 0.2f && !isHunting)
         {
+            Debug.Log("target reached");
             hasTarget = false;
         }
     }

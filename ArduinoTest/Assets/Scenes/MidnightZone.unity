@@ -311,6 +311,7 @@ MonoBehaviour:
   - {fileID: 328336828}
   - {fileID: 82516455}
   swarmActivationTime: 10
+  pumpEventPath: event:/pump/Pump-sound
   isExpanding: 0
 --- !u!135 &155349768
 SphereCollider:
@@ -1414,6 +1415,7 @@ MonoBehaviour:
   prey: {fileID: 0}
   particleTimeInSeconds: 0
   particleSystem: {fileID: 0}
+  isHunting: 0
 --- !u!65 &1018713131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1665,6 +1667,7 @@ GameObject:
   - component: {fileID: 1098504951}
   - component: {fileID: 1098504952}
   - component: {fileID: 1098504953}
+  - component: {fileID: 1098504954}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1840,6 +1843,32 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &1098504954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098504946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcc16b3f7e5b7e48a1b86203bf66285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAmbience
+  ambienceEvents:
+  - event:/ambience/Random/random-01
+  - event:/ambience/Random/random-02
+  - event:/ambience/Random/random-03
+  - event:/ambience/Random/random-04
+  - event:/ambience/Random/random-05
+  - event:/ambience/Random/random-06
+  - event:/ambience/Random/random-07
+  - event:/ambience/Random/random-08
+  - event:/ambience/Random/random-09
+  - event:/ambience/Random/random-10
+  - event:/ambience/Random/random-11
+  timeBetweenEventsInSeconds: {x: 15, y: 60}
+  maxEventDistance: 30
 --- !u!4 &1178233072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4391734452912474718, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
@@ -1948,6 +1977,7 @@ MonoBehaviour:
   prey: {fileID: 0}
   particleTimeInSeconds: 0
   particleSystem: {fileID: 0}
+  isHunting: 0
 --- !u!114 &1217435856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2867,8 +2897,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   spawnPrefab: {fileID: 6807749341066050734, guid: b58cfcfba62830d4a9612bc74ac63452, type: 3}
-  spawnAmount: 15
-  spawnRadius: 15
+  spawnAmount: 30
+  spawnRadius: 10
 --- !u!4 &1811551476
 Transform:
   m_ObjectHideFlags: 0

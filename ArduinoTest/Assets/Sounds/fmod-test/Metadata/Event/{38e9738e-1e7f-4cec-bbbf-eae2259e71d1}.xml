@@ -56,7 +56,11 @@
 			<destination>{a86ca477-3d24-46c8-83cd-78bc3e47f568}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{ca4aec4c-56a7-47c2-9b7c-1936b3761387}" />
+	<object class="EventAutomatableProperties" id="{ca4aec4c-56a7-47c2-9b7c-1936b3761387}">
+		<property name="maximumDistance">
+			<value>50</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{1847c923-9518-4394-add0-55e6e75a1fe1}" />
 	<object class="GroupTrack" id="{e6f9c576-8434-4f54-aff1-c1cedbd7378c}">
 		<relationship name="modules">
@@ -138,7 +142,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7f5050ee-67c2-4491-a4f3-8686dd93fbd0}" />
-	<object class="SpatialiserEffect" id="{5d5d804e-0c30-4002-bf3c-2a19d130f5cb}" />
+	<object class="SpatialiserEffect" id="{5d5d804e-0c30-4002-bf3c-2a19d130f5cb}">
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+	</object>
 	<object class="SFXReverbEffect" id="{12f3a517-32cf-4c85-8bf8-a958a6f95c7b}">
 		<property name="decayTime">
 			<value>4000</value>

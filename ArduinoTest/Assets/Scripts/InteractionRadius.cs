@@ -5,6 +5,7 @@ public class InteractionRadius : MonoBehaviour
 {
     [SerializeField] private SwarmManager[] swarmManagers;
     [SerializeField] private float swarmActivationTime;
+    [SerializeField] private string pumpEventPath;
     private float expansionStrength = 10f;
     private float expansionDuration = 10f;
     public bool isExpanding = false;
@@ -19,10 +20,12 @@ public class InteractionRadius : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.spaceKey.isPressed && timer == 0)
+        if (Keyboard.current.spaceKey.isPressed && !isExpanding)
         {
             isExpanding = true;
             sphereCollider.enabled = true;
+            Debug.Log("Balls");
+            FMODUnity.RuntimeManager.PlayOneShot(pumpEventPath, transform.position);
         }
         if (isExpanding)
         {
@@ -72,6 +75,7 @@ public class InteractionRadius : MonoBehaviour
             expansionDuration = result.leds;
             isExpanding = true;
             sphereCollider.enabled = true;
+            FMODUnity.RuntimeManager.PlayOneShot(pumpEventPath, transform.position);
         }
     }
 

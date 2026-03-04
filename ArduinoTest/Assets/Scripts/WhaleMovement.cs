@@ -61,7 +61,7 @@ public class WhaleMovement : MonoBehaviour
     {
         int randomSoundIndex = Random.Range(0, fmodEvents.Length - 1);
         Debug.Log("Played sound: " + fmodEvents[randomSoundIndex]);
-        FMODUnity.RuntimeManager.PlayOneShot(fmodEvents[randomSoundIndex], transform.position);
+        //FMODUnity.RuntimeManager.PlayOneShot(fmodEvents[randomSoundIndex], transform.position);
         if (!isGlowing)
         {
             isGlowing = true;
