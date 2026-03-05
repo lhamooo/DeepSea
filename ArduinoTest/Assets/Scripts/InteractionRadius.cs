@@ -6,7 +6,7 @@ public class InteractionRadius : MonoBehaviour
     [SerializeField] private SwarmManager[] swarmManagers;
     [SerializeField] private float swarmActivationTime;
     [SerializeField] private string pumpEventPath;
-    private float expansionStrength = 10f;
+    private float expansionStrength = 1f;
     private float expansionDuration = 10f;
     public bool isExpanding = false;
     private int timer = 0;
@@ -41,13 +41,12 @@ public class InteractionRadius : MonoBehaviour
             {
                 timer++;
                 Vector3 s = transform.localScale;
-                Vector3 newScale = new Vector3(s.x + 1f, s.y + 1f, s.z + 1f);
+                Vector3 newScale = new Vector3(s.x + expansionStrength, s.y + expansionStrength, s.z + expansionStrength);
                 transform.localScale = newScale;
             }
             else
             {
                 timer = 0;
-                expansionStrength = 0;
                 transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 isExpanding = false;
                 sphereCollider.enabled = false;
@@ -70,6 +69,8 @@ public class InteractionRadius : MonoBehaviour
             currentStrength = 2;
         }
 
+        expansionStrength = result.leds / 10;
+
         if (!isExpanding)
         {
             expansionDuration = result.leds;
@@ -82,7 +83,7 @@ public class InteractionRadius : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.tag + " activated!");
-        if (other.gameObject.CompareTag("Behaviour"))
+        if (other.gameObject.CompareTag("Behaviour") && isExpanding)
         {
             other.GetComponent<BehaviourTrigger>().TriggerBehaviour(currentStrength);
         }

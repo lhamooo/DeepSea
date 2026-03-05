@@ -1686,19 +1686,19 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 2
   m_GateFitMode: 2
-  m_FOVAxisMode: 1
+  m_FOVAxisMode: 0
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 8.402491
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 15, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -1708,7 +1708,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 110
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1995,6 +1995,7 @@ MonoBehaviour:
   turnSpeedModifier: 0.5
   meshRenderer: {fileID: 0}
   glowDuration: 0
+  glowSpeed: 0.5
   isGlowing: 0
   fmodEvents: []
 --- !u!1 &1218655980
@@ -2054,7 +2055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.86
+      value: -19.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2095,6 +2096,10 @@ PrefabInstance:
     - target: {fileID: 3078279354004050284, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103128376329799369, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7442557247907069935, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       propertyPath: m_Mesh
@@ -2142,12 +2147,6 @@ PrefabInstance:
       addedObject: {fileID: 1254005006}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1254005010}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1254005009}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1254005012}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       insertIndex: -1
@@ -2175,6 +2174,7 @@ MonoBehaviour:
   turnSpeedModifier: 0.3
   meshRenderer: {fileID: 1051466727}
   glowDuration: 2
+  glowSpeed: 0.5
   isGlowing: 0
   fmodEvents:
   - event:/whale/whale-01
@@ -2223,63 +2223,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!23 &1254005009
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254005003}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1254005010
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254005003}
-  m_Mesh: {fileID: 3471571782477617947, guid: a31055f29bae840e4b3094179c96a2c5, type: 3}
 --- !u!114 &1254005012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2735,6 +2678,8 @@ MonoBehaviour:
   spawnPrefab: {fileID: 7615841831993858374, guid: eb4b2da86d038f74f8a9f781dd58e18f, type: 3}
   spawnAmount: 15
   spawnRadius: 15
+  doSpawnDelay: 0
+  spawnDelayInSeconds: 0.2
 --- !u!4 &1598168181
 Transform:
   m_ObjectHideFlags: 0
@@ -2899,6 +2844,8 @@ MonoBehaviour:
   spawnPrefab: {fileID: 6807749341066050734, guid: b58cfcfba62830d4a9612bc74ac63452, type: 3}
   spawnAmount: 30
   spawnRadius: 10
+  doSpawnDelay: 1
+  spawnDelayInSeconds: 0.2
 --- !u!4 &1811551476
 Transform:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class WhaleMovement : MonoBehaviour
     [Header("Glow Shader")]
     [SerializeField] SkinnedMeshRenderer meshRenderer;
     [SerializeField] private float glowDuration;
+    [SerializeField] private float glowSpeed = 0.5f;
     public bool isGlowing;
 
     [Header("Sounds")]
@@ -34,7 +35,7 @@ public class WhaleMovement : MonoBehaviour
             glowStrength += Time.deltaTime;
             if (meshRenderer.materials[1].GetFloat("_Fill") < 1f)
             {
-                meshRenderer.materials[1].SetFloat("_Fill", glowStrength * 0.5f);
+                meshRenderer.materials[1].SetFloat("_Fill", glowStrength * glowSpeed);
             }
 
             if (glowStrength > glowDuration)
@@ -45,7 +46,7 @@ public class WhaleMovement : MonoBehaviour
         }
         else if (meshRenderer.materials[1].GetFloat("_Fill") > 0)
         {
-            meshRenderer.materials[1].SetFloat("_Fill", meshRenderer.materials[1].GetFloat("_Fill") - Time.deltaTime * 0.5f);
+            meshRenderer.materials[1].SetFloat("_Fill", meshRenderer.materials[1].GetFloat("_Fill") - Time.deltaTime * glowSpeed);
         }
     }
 
@@ -59,9 +60,21 @@ public class WhaleMovement : MonoBehaviour
 
     private void TriggerBehaviour(int strength)
     {
+        switch (strength)
+        {
+            case 0:
+                glowDuration *= 1f;
+                break;
+            case 1:
+                glowDuration *= 1.5f;
+                break;
+            case 2:
+                glowDuration *= 2f;
+                break;
+        }
         int randomSoundIndex = Random.Range(0, fmodEvents.Length - 1);
         Debug.Log("Played sound: " + fmodEvents[randomSoundIndex]);
-        //FMODUnity.RuntimeManager.PlayOneShot(fmodEvents[randomSoundIndex], transform.position);
+        FMODUnity.RuntimeManager.PlayOneShot(fmodEvents[randomSoundIndex], transform.position);
         if (!isGlowing)
         {
             isGlowing = true;
