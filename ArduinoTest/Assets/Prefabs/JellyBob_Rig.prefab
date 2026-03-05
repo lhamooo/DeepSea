@@ -935,7 +935,15 @@ PrefabInstance:
       value: Jelly
       objectReference: {fileID: 0}
     - target: {fileID: 1823817582581819116, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823817582581819116, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b24319757c524e4d9c8f347d151140d, type: 2}
+    - target: {fileID: 1823817582581819116, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a895ad278c76a44eb9e4e41627fc5329, type: 2}
     m_RemovedComponents: []
