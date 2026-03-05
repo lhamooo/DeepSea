@@ -12,12 +12,10 @@ public class ArduinoResult
 public class ArduinoStuff : MonoBehaviour
 {
     SerialPort serialPort = new SerialPort("/dev/cu.usbmodem101", 9600);
-    Renderer rend;
     private InteractionRadius interactionZone;
 
     void Start()
     {
-        rend = GetComponent<Renderer>();
         interactionZone = GetComponent<InteractionRadius>();
 
         serialPort.ReadTimeout = 50;
@@ -45,26 +43,8 @@ public class ArduinoStuff : MonoBehaviour
             ArduinoResult result = JsonUtility.FromJson<ArduinoResult>(data);
 
             if (result != null && !string.IsNullOrEmpty(result.geschwindigkeit))
-                ApplyResult(result);
+                interactionZone.StartInteraction(result);
         }
-    }
-
-    void ApplyResult(ArduinoResult result)
-    {
-        Color c = Color.white;
-
-        if (result.geschwindigkeit == "slow")
-            c = Color.red;
-        else if (result.geschwindigkeit == "middle")
-            c = Color.blue;
-        else if (result.geschwindigkeit == "fast")
-            c = Color.green;
-
-        rend.material.color = c;
-
-        float t = Mathf.InverseLerp(0, 12, result.leds);
-        float s = Mathf.Lerp(1f, 1.3f, t);
-        transform.localScale = Vector3.one * s;
     }
 
     void OnDestroy()

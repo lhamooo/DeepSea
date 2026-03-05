@@ -5,10 +5,11 @@ public class InteractionRadius : MonoBehaviour
 {
     [SerializeField] private SwarmManager[] swarmManagers;
     [SerializeField] private float swarmActivationTime;
-    private float expansionStrength;
-    private float expansionDuration;
+    [SerializeField] private string pumpEventPath;
+    private float expansionStrength = 1f;
+    private float expansionDuration = 10f;
     public bool isExpanding = false;
-    private int timer;
+    private int timer = 0;
     private SphereCollider sphereCollider;
     private int currentStrength;
     void Start()
@@ -19,14 +20,14 @@ public class InteractionRadius : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.spaceKey.isPressed && timer == 0)
+        if (Keyboard.current.spaceKey.isPressed && !isExpanding)
         {
             isExpanding = true;
             sphereCollider.enabled = true;
-            expansionStrength++;
+            Debug.Log("Balls");
+            FMODUnity.RuntimeManager.PlayOneShot(pumpEventPath, transform.position);
         }
-
-        else if (isExpanding)
+        if (isExpanding)
         {
             if (timer == 0)
             {
@@ -36,17 +37,16 @@ public class InteractionRadius : MonoBehaviour
                 }
             }
 
-            if (timer < expansionDuration)
+            if (timer < expansionDuration * 10)
             {
                 timer++;
                 Vector3 s = transform.localScale;
-                Vector3 newScale = new Vector3(s.x + 0.005f * expansionStrength, s.y + 0.005f * expansionStrength, s.z + 0.005f * expansionStrength);
+                Vector3 newScale = new Vector3(s.x + expansionStrength, s.y + expansionStrength, s.z + expansionStrength);
                 transform.localScale = newScale;
             }
             else
             {
                 timer = 0;
-                expansionStrength = 0;
                 transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 isExpanding = false;
                 sphereCollider.enabled = false;
@@ -69,13 +69,21 @@ public class InteractionRadius : MonoBehaviour
             currentStrength = 2;
         }
 
-        expansionDuration = result.leds;
+        expansionStrength = result.leds / 10;
+
+        if (!isExpanding)
+        {
+            expansionDuration = result.leds;
+            isExpanding = true;
+            sphereCollider.enabled = true;
+            FMODUnity.RuntimeManager.PlayOneShot(pumpEventPath, transform.position);
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.tag + " activated!");
-        if (other.gameObject.CompareTag("Behaviour"))
+        if (other.gameObject.CompareTag("Behaviour") && isExpanding)
         {
             other.GetComponent<BehaviourTrigger>().TriggerBehaviour(currentStrength);
         }

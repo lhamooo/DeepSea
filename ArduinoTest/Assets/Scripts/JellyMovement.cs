@@ -12,6 +12,7 @@ public class JellyMovement : MonoBehaviour
     private float timer = 0;
     private Rigidbody rb;
     private BehaviourTrigger behaviourTrigger;
+    private bool behaviourActive = false;
 
     void Start()
     {
@@ -40,24 +41,28 @@ public class JellyMovement : MonoBehaviour
 
     private void TriggerBehaviour(int strength)
     {
-        float strengthModifier = 1f;
-        float behaviourDuration = 5f;
-        switch (strength)
+        if (!behaviourActive)
         {
-            case 0:
-                strengthModifier = 0.8f;
-                behaviourDuration = 3f;
-                break;
-            case 1:
-                strengthModifier = 1f;
-                behaviourDuration = 5f;
-                break;
-            case 2:
-                strengthModifier = 1.5f;
-                behaviourDuration = 8f;
-                break;
+            float strengthModifier = 1f;
+            float behaviourDuration = 5f;
+            switch (strength)
+            {
+                case 0:
+                    strengthModifier = 0.8f;
+                    behaviourDuration = 4f;
+                    break;
+                case 1:
+                    strengthModifier = 1.2f;
+                    behaviourDuration = 6f;
+                    break;
+                case 2:
+                    strengthModifier = 2f;
+                    behaviourDuration = 10f;
+                    break;
+            }
+            StartCoroutine(RechargeActivation(behaviourDuration, strengthModifier));
+            behaviourActive = true;
         }
-        StartCoroutine(RechargeActivation(behaviourDuration, strengthModifier));
     }
 
     private IEnumerator RechargeActivation(float duration, float strengthModifier)
@@ -65,5 +70,6 @@ public class JellyMovement : MonoBehaviour
         torque = activeTorqueStrength * strengthModifier;
         yield return new WaitForSeconds(duration);
         torque = idleTorqueStrength;
+        behaviourActive = false;
     }
 }

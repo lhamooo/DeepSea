@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e656f6e5e87a8d40a1867f4ac23c328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwarmManager
-  boidPrefab: {fileID: 6123276601998563570, guid: fc9255c754f52d34a9e4ae667f05a2b8, type: 3}
+  boidPrefab: {fileID: 5167381067160104646, guid: 20418df2f9b2c644d8c0d1a69dadd335, type: 3}
   swarmSize: 20
   boids: []
   cohesionWeight: 1
@@ -311,6 +311,7 @@ MonoBehaviour:
   - {fileID: 328336828}
   - {fileID: 82516455}
   swarmActivationTime: 10
+  pumpEventPath: event:/pump/Pump-sound
   isExpanding: 0
 --- !u!135 &155349768
 SphereCollider:
@@ -674,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e656f6e5e87a8d40a1867f4ac23c328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwarmManager
-  boidPrefab: {fileID: 6123276601998563570, guid: fc9255c754f52d34a9e4ae667f05a2b8, type: 3}
+  boidPrefab: {fileID: 5167381067160104646, guid: 20418df2f9b2c644d8c0d1a69dadd335, type: 3}
   swarmSize: 20
   boids: []
   cohesionWeight: 1
@@ -1006,7 +1007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e656f6e5e87a8d40a1867f4ac23c328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwarmManager
-  boidPrefab: {fileID: 6123276601998563570, guid: fc9255c754f52d34a9e4ae667f05a2b8, type: 3}
+  boidPrefab: {fileID: 5167381067160104646, guid: 20418df2f9b2c644d8c0d1a69dadd335, type: 3}
   swarmSize: 20
   boids: []
   cohesionWeight: 1
@@ -1282,7 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e656f6e5e87a8d40a1867f4ac23c328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwarmManager
-  boidPrefab: {fileID: 6123276601998563570, guid: fc9255c754f52d34a9e4ae667f05a2b8, type: 3}
+  boidPrefab: {fileID: 5167381067160104646, guid: 20418df2f9b2c644d8c0d1a69dadd335, type: 3}
   swarmSize: 20
   boids: []
   cohesionWeight: 1
@@ -1414,6 +1415,7 @@ MonoBehaviour:
   prey: {fileID: 0}
   particleTimeInSeconds: 0
   particleSystem: {fileID: 0}
+  isHunting: 0
 --- !u!65 &1018713131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1665,6 +1667,7 @@ GameObject:
   - component: {fileID: 1098504951}
   - component: {fileID: 1098504952}
   - component: {fileID: 1098504953}
+  - component: {fileID: 1098504954}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1683,19 +1686,19 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 2
   m_GateFitMode: 2
-  m_FOVAxisMode: 1
+  m_FOVAxisMode: 0
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 8.402491
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 15, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -1705,7 +1708,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 110
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1840,6 +1843,32 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &1098504954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098504946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcc16b3f7e5b7e48a1b86203bf66285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAmbience
+  ambienceEvents:
+  - event:/ambience/Random/random-01
+  - event:/ambience/Random/random-02
+  - event:/ambience/Random/random-03
+  - event:/ambience/Random/random-04
+  - event:/ambience/Random/random-05
+  - event:/ambience/Random/random-06
+  - event:/ambience/Random/random-07
+  - event:/ambience/Random/random-08
+  - event:/ambience/Random/random-09
+  - event:/ambience/Random/random-10
+  - event:/ambience/Random/random-11
+  timeBetweenEventsInSeconds: {x: 15, y: 60}
+  maxEventDistance: 30
 --- !u!4 &1178233072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4391734452912474718, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
@@ -1948,6 +1977,7 @@ MonoBehaviour:
   prey: {fileID: 0}
   particleTimeInSeconds: 0
   particleSystem: {fileID: 0}
+  isHunting: 0
 --- !u!114 &1217435856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1965,7 +1995,9 @@ MonoBehaviour:
   turnSpeedModifier: 0.5
   meshRenderer: {fileID: 0}
   glowDuration: 0
+  glowSpeed: 0.5
   isGlowing: 0
+  fmodEvents: []
 --- !u!1 &1218655980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,7 +2055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.86
+      value: -19.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2057,9 +2089,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhaleJohn_Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
+      propertyPath: m_TagString
+      value: Behaviour
+      objectReference: {fileID: 0}
     - target: {fileID: 3078279354004050284, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103128376329799369, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7442557247907069935, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       propertyPath: m_Mesh
@@ -2107,18 +2147,6 @@ PrefabInstance:
       addedObject: {fileID: 1254005006}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1254005010}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1254005009}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1254005008}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1254005011}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1254005012}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
       insertIndex: -1
@@ -2146,7 +2174,12 @@ MonoBehaviour:
   turnSpeedModifier: 0.3
   meshRenderer: {fileID: 1051466727}
   glowDuration: 2
+  glowSpeed: 0.5
   isGlowing: 0
+  fmodEvents:
+  - event:/whale/whale-01
+  - event:/whale/whale-02
+  - event:/whale/whale-03
 --- !u!4 &1254005005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
@@ -2190,86 +2223,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!64 &1254005008
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254005003}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3471571782477617947, guid: a31055f29bae840e4b3094179c96a2c5, type: 3}
---- !u!23 &1254005009
-MeshRenderer:
+--- !u!114 &1254005012
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254005003}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1254005010
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254005003}
-  m_Mesh: {fileID: 3471571782477617947, guid: a31055f29bae840e4b3094179c96a2c5, type: 3}
---- !u!136 &1254005011
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876c9b5248a4d0748825ee492218e8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BehaviourTrigger
+--- !u!136 &1254005013
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2288,53 +2254,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.67
-  m_Height: 0.11232454
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.037736814, z: -0.047062606}
---- !u!114 &1254005012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254005003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 876c9b5248a4d0748825ee492218e8d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BehaviourTrigger
---- !u!114 &1254005013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254005003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: InteractionZone
-  EventReference:
-    Guid:
-      Data1: -553676946
-      Data2: 1201621227
-      Data3: -1535229288
-      Data4: -515999616
-    Path: event:/whale/whale-activated
-  Event: 
-  EventPlayTrigger: 3
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  m_Radius: 1.31
+  m_Height: 5.18
+  m_Direction: 2
+  m_Center: {x: 0, y: -1.55, z: -0.047062606}
 --- !u!4 &1281954022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6366067180219985710, guid: 0a7e65d280a5c794aaaeb25e21515047, type: 3}
@@ -2755,6 +2678,8 @@ MonoBehaviour:
   spawnPrefab: {fileID: 7615841831993858374, guid: eb4b2da86d038f74f8a9f781dd58e18f, type: 3}
   spawnAmount: 15
   spawnRadius: 15
+  doSpawnDelay: 0
+  spawnDelayInSeconds: 0.2
 --- !u!4 &1598168181
 Transform:
   m_ObjectHideFlags: 0
@@ -2917,8 +2842,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   spawnPrefab: {fileID: 6807749341066050734, guid: b58cfcfba62830d4a9612bc74ac63452, type: 3}
-  spawnAmount: 15
-  spawnRadius: 15
+  spawnAmount: 30
+  spawnRadius: 10
+  doSpawnDelay: 1
+  spawnDelayInSeconds: 0.2
 --- !u!4 &1811551476
 Transform:
   m_ObjectHideFlags: 0
