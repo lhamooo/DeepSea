@@ -135,7 +135,7 @@ Material:
     - _boarderPower: 0.1
     - _boarderSize: 3
     - _distortionSpeed: 0.01
-    - _noiceScale: -0.005
+    - _noiceScale: -0.001
     - _scrollinspeed: 0.08
     - _surfaceMovementSpeed: 0.001
     m_Colors:
@@ -145,6 +145,6 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _boarderColor: {r: 0.4358091, g: 0, b: 0.9811321, a: 1}
     - _scrollingSpeed: {r: 0, g: 0, b: 0, a: 0}
-    - _textureColor: {r: 1, g: 0, b: 1, a: 1}
+    - _textureColor: {r: 1, g: 0, b: 0.9989648, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

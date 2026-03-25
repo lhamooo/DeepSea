@@ -9,7 +9,7 @@ public class WhaleMovement : MonoBehaviour
     [SerializeField] private float turnSpeedModifier = 0.5f;
 
     [Header("Glow Shader")]
-    [SerializeField] SkinnedMeshRenderer meshRenderer;
+    [SerializeField] private SkinnedMeshRenderer meshRenderer;
     [SerializeField] private float glowDuration;
     [SerializeField] private float glowSpeed = 0.5f;
     public bool isGlowing;

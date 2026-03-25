@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FishMovement : MonoBehaviour
@@ -91,6 +92,17 @@ public class FishMovement : MonoBehaviour
         }
     }
 
+    private IEnumerator HuntBoost(float strengthModifier)
+    {
+        float multiplier = 1 + strengthModifier;
+        currentMoveSpeed *= multiplier;
+        yield return new WaitForSeconds(0.5f);
+        if (isHunting)
+        {
+            currentMoveSpeed /= multiplier;
+        }
+    }
+
     private GameObject FindClosestBoid()
     {
         GameObject[] boids;
@@ -115,21 +127,28 @@ public class FishMovement : MonoBehaviour
         switch (strength)
         {
             case 0:
-                strengthModifier = 0.8f;
-                break;
-            case 1:
                 strengthModifier = 1f;
                 break;
+            case 1:
+                strengthModifier = 1.2f;
+                break;
             case 2:
-                strengthModifier = 1.5f;
+                strengthModifier = 1.8f;
                 break;
         }
         if (canHunt)
         {
-            isHunting = true;
-            currentMoveSpeed = huntSpeed * strengthModifier;
-            currentTurnSpeedModifier = huntingTurnSpeedModifier * strengthModifier;
-            Debug.Log("Triggered behaviour with Strength " + strength);
+            if (isHunting)
+            {
+                StartCoroutine(HuntBoost(strengthModifier));
+            }
+            else
+            {
+                isHunting = true;
+                currentMoveSpeed = huntSpeed * strengthModifier;
+                currentTurnSpeedModifier = huntingTurnSpeedModifier * strengthModifier;
+                Debug.Log("Triggered behaviour with Strength " + strength);
+            }
 
             if (!particleSystem.isPlaying)
             {

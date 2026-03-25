@@ -932,7 +932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
       propertyPath: m_TagString
-      value: Jelly
+      value: Behaviour
       objectReference: {fileID: 0}
     - target: {fileID: 1823817582581819116, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
       propertyPath: m_Materials.Array.size
@@ -1042,6 +1042,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -1719468177246837604, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
   m_PrefabInstance: {fileID: 5960674794673865215}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &5473863975337699091 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1823817582581819116, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
+  m_PrefabInstance: {fileID: 5960674794673865215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6112821976360225871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 463177065379532208, guid: 8d5ae0b86e61dff4eb4f5bafd6dd4fb6, type: 3}
@@ -1149,6 +1154,9 @@ MonoBehaviour:
   maxDistanceFromZero: 15
   idleTorqueStrength: 10
   activeTorqueStrength: 20
+  passiveColour: {r: 1, g: 0, b: 1, a: 1}
+  meshRenderer: {fileID: 5473863975337699091}
+  colourChangeDuration: 1
 --- !u!136 &2737572353138711963
 CapsuleCollider:
   m_ObjectHideFlags: 0

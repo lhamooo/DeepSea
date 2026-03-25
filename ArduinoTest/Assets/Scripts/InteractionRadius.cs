@@ -24,7 +24,6 @@ public class InteractionRadius : MonoBehaviour
         {
             isExpanding = true;
             sphereCollider.enabled = true;
-            Debug.Log("Balls");
             FMODUnity.RuntimeManager.PlayOneShot(pumpEventPath, transform.position);
         }
         if (isExpanding)
